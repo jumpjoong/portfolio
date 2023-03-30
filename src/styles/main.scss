@@ -24,11 +24,36 @@ main {
         transition: 0.3s;
         .box-txt {
           font-size: 4rem;
-          font-weight: 700;
           background-color: transparent;
+          font-family: 'Russo One', sans-serif
         }
         .text {
           background-color: transparent;
+          margin-top: 15px;
+          line-height: 1.2;
+          p {
+            font-size: 2rem;
+            background-color: transparent;
+            // font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'KHNPHD';
+            letter-spacing: -0.3px;
+          }
+        }
+        a {
+          background-color: transparent;
+          font-size: 20px;
+          padding: 5px 0;
+          border-bottom: 2px solid rgb(51, 50, 50);
+          display: inline-block;
+          margin-top: 40px;
+          
+        }
+        .event1 {
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:hover .event1 {
+          opacity: 1;
         }
       }
       //////////////////////////////////////////////////
@@ -43,31 +68,17 @@ main {
           height: 800px;
           background-color: #ffdb6b;
         }
-        .event1 {
-          opacity: 0;
-          transition: 0.3s;
-        }
-        &:hover .event1 {
-          opacity: 1;
-        }
       }
       .Skills {
         position: absolute;
         bottom: 20px;
         right: 2%;
-        width: 800px;
+        width: 1000px;
         height: 600px;
         border: 1px solid black;
         &:hover {
           height: 700px;
           background-color: #81B3FF;
-        }
-        .event2 {
-          opacity: 0;
-          transition: 0.3s;
-        }
-        &:hover .event2 {
-          opacity: 1;
         }
       }
       .Project {
@@ -81,32 +92,18 @@ main {
           height: 600px;
           background-color: #FD7989;
         }
-        .event3 {
-          opacity: 0;
-          transition: 0.3s;
-        }
-        &:hover .event3 {
-          opacity: 1;
-        }
       }
       .Contact{
         position: absolute;
         z-index: 9999;
-        right: 8%;
+        right: 10%;
         bottom: 20px;
-        width: 900px;
+        width: 1100px;
         height: 250px;
         border: 1px solid black;
         &:hover {
           height: 400px;
           background-color: #4DE2C7;
-        }
-        .event4 {
-          opacity: 0;
-          transition: 0.3s;
-        }
-        &:hover .event4 {
-          opacity: 1;
         }
       }
     }

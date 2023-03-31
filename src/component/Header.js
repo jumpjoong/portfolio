@@ -4,13 +4,13 @@ import "../styles/header.scss";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const { reverse, value } = useContext(AppC);
+  const { reverse, aaa } = useContext(AppC);
 
   return (
     <header className="header">
       <div className="header-first" onClick={reverse}>
         <img src="./img/open.svg" alt="버거메뉴" />
-        <div className={value ? "burger on" : "burger"}>
+        <div className={aaa ? "burger on" : "burger"}>
           <ul>
             <li><img src="./img/close.svg" alt="버거메뉴"/></li>
             <li>

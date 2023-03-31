@@ -10,7 +10,7 @@ export default function MyContext ({children}) {
     setValue(!value)
   }
 
-  const data = {value, setValue, reverse}
+  const data = {value, setValue, reverse }
 
   return (
     <AppC.Provider value={data}>{children}</AppC.Provider>

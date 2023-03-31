@@ -23,18 +23,15 @@
   .burger {
     position: absolute;
     top: 0;
-    opacity: 1;
-    opacity: 0;
+    display: none;
     width: 0;
     height: 100%;
-    pointer-events: none;
-    transition: 0.2s;
-    transition-timing-function: ease-in;
+    // pointer-events: none; 
   }
   .on {
     border-radius: 36px;
-    opacity: 1;
-    width: 300px;
+    display: block;
+    width: 350px;
     background-color: white !important;
   }
   ul {
@@ -45,13 +42,18 @@
     li {
       line-height: 68px;
       background-color: white;
-      &:nth-of-type(1) {
-        border-radius: 36px 0 0 36px;
-      }
       img {
+        transform: scale(0.8);
         padding: 8px;
         border-radius: 36px;
         background-color: white;
+        cursor: pointer;
+      }
+      &:nth-of-type(1) {
+        border-radius: 36px 0 0 36px;
+      }
+      &:not(:nth-child(1)) {
+        margin: 0 10px;
       }
     }
   }

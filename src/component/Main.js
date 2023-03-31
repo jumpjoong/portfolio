@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/main.scss'
+import Header from './Header'
 
 function Main() {
   return (
+    <>
+    {/* <Header /> */}
     <main>
       <div className="main-wrap">
         <div className="main-txt">
@@ -45,6 +48,7 @@ function Main() {
         </div>
       </div>
     </main>
+    </>
   )
 }
 

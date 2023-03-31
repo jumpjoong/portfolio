@@ -13,6 +13,7 @@
       padding: 8px;
       border-radius: 36px;
       background-color: white;
+      transform: scale(0.8);
       cursor: pointer;
       &:hover {
         background-color: gray;
@@ -23,15 +24,22 @@
   .burger {
     position: absolute;
     top: 0;
-    display: none;
     width: 0;
+    opacity: 0;
     height: 100%;
-    // pointer-events: none; 
+    pointer-events: none; 
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.570, -0.015, 0.305, 0.940);
   }
   .on {
+    pointer-events: auto;
     border-radius: 36px;
     display: block;
     width: 350px;
+    height: 69px;
+    opacity: 1;
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.570, -0.015, 0.305, 0.940);
     background-color: white !important;
   }
   ul {
@@ -48,6 +56,9 @@
         border-radius: 36px;
         background-color: white;
         cursor: pointer;
+        &:hover {
+          background-color: gray;
+        }
       }
       &:nth-of-type(1) {
         border-radius: 36px 0 0 36px;
@@ -55,6 +66,12 @@
       &:not(:nth-child(1)) {
         margin: 0 10px;
       }
+    }
+  }
+  .header-second {
+    background-color: transparent;
+    > a {
+      background-color: transparent;
     }
   }
 } 

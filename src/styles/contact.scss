@@ -1,13 +1,10 @@
-$header-height: 89px;
+$header-height: 108px;
 
 .contact {
   height: calc(100vh - $header-height);
   display: flex;
   justify-content: center;
-  align-items: center;
   .contact-wrap{
-    height: 100%;
-    margin-top: 50px;
     display: flex;
     max-width: 1600px;
     width: 100%;

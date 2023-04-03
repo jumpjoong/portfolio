@@ -24,6 +24,7 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
 }
 p {
+  word-break: keep-all;
   font-size: 16px;
 }
 a:visited, a:active {

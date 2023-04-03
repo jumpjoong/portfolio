@@ -21,7 +21,7 @@ function Header() {
           <ul>
             <li><img src="./img/close.svg" alt="버거메뉴"/></li>
             <li>
-              <Link to={"/profile"}>Project</Link>
+              <Link to={"/profile"}>Profile</Link>
             </li>
             <li>
               <Link to={"/skills"}>Skills</Link>

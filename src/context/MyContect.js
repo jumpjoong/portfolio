@@ -19,3 +19,4 @@ export default function MyContext ({children}) {
     <AppC.Provider value={data}>{children}</AppC.Provider>
   )
 }
+

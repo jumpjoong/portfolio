@@ -1,10 +1,44 @@
+//영어 폰트
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+//영어 폰트(대제목)
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+//영어 폰트(h2)
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+//한글 폰트
 @font-face {
   font-family: 'KHNPHD';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KHNPHD.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+//한글 폰트(설명 폰트, 얇은 폰트)
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+//한글 폰트 (대제목)
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --header-height: 108px;
+  //영어 폰트
+  --eng-font: 'Ubuntu', sans-serif;
+  //영어 폰트(대제목)
+  --hugeEng-font: 'Oswald', sans-serif;
+  //영어 폰트(h2)
+  --engH2-font: 'Michroma', sans-serif;
+  //한글 폰트
+  --kor-font: 'KHNPHD';
+  //한글 폰트(얇은)
+  --detail-font: 'S-CoreDream-3Light';
+  //한글 폰트(대제목)
+  --h1-font: 'NanumSquareNeo-Variable';
 }
 * {
   margin: 0;

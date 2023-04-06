@@ -1,7 +1,5 @@
-$header-height: 108px;
-
 .contact {
-  height: calc(100vh - $header-height);
+  height: calc(100vh - var(--header-height));
   display: flex;
   justify-content: center;
   .contact-wrap{
@@ -24,6 +22,10 @@ $header-height: 108px;
               font-size: 1.5rem;
               margin-bottom: 15px;
               border-bottom: 1px solid rgb(128, 128, 128);
+              font-family: var(--kor-font);
+            }
+            &:nth-of-type(2) {
+              font-family: var(--eng-font);
             }
           }
         }

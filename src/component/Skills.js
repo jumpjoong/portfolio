@@ -15,7 +15,7 @@ function Skills() {
       </div>
       <div className="skills-wrap">
         <div className="front-skills">
-          <p># FRONT-END SKILLS</p>
+          <p># FRONT-END</p>
           <div className="skill-box">
             <ul>
               <li>

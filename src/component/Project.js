@@ -1,52 +1,97 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/project.scss'
 function Project() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [maxScrollPosition, setMaxScrollPosition] = useState(0);
-  const scrollContainerRef = useRef(null);
+  const aaa = document.getElementsByClassName("project-wrap");
+  let screenWidth = document.body.offsetWidth;
 
-  useEffect(()=> {
-    const scrollContainer = scrollContainerRef.current;
-    const maxScrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    setMaxScrollPosition(maxScrollWidth);
-  },[])
-
-  const handleScroll = (e) => {
-    if (scrollPosition < 0 ){
-      return setScrollPosition(0);
-    }else if (scrollPosition > maxScrollPosition){
-      return setScrollPosition(maxScrollPosition);
-    }else {
-      const delta = e.deltaY;
-      const container = e.target;
-      const moveCon = scrollPosition + delta;
-  
-      container.scrollLeft = moveCon;
-      setScrollPosition(moveCon);
-    }
-  };
+  window.addEventListener('wheel', (e) => {
+    if(e.deltaY < 0 ) {
+      aaa[0].style = `transform: translate(-${Number(0) * screenWidth}px, -50%);`
+    } else {
+      aaa[0].style = `transform: translate(-${Number(1) * screenWidth}px, -50%);`
+    };
+  });
 
   return (
     <div className="project">
-      <h2>영어로 쌸라쌸라 </h2>
-      <div className="horizontal-scroll" onWheel={handleScroll} ref={scrollContainerRef}>
+      <div className="project-h2">
+        <h2>CONTENT</h2>
+        <h2>CREATION: OUR</h2>
+        <h2>PROJECTS</h2>
+      </div>
+      <div className="project-wrap">
         <div className="first">  
           <figure>
-            <p>로아 프로젝트 이미지 클릭하면 이동(배포 사이트)</p>
+            <div>
+              <img src="./img/lostArk.png" alt="로스트 아크"  />
+              <div>
+                <div className="dev-date">
+                  <p>개발 기간</p>
+                  <p>2023.02.01 ~ 2023.02.10</p>
+                </div>
+                <div className="web">
+                  <Link to="http://khj0196.dothome.co.kr" target='_blank'>🚀Web View</Link>
+                  <Link to="https://github.com/jumpjoong/lostArk" target='_blank'>💻GITHUB</Link>
+                </div>
+              </div>
+            </div>
             <figcaption>
-              <p>로아 프로젝트 이름</p>
-              <p>사용기술</p>
-              <p>api를 이용한 설명</p>
+              <ul>
+                <li>
+                  <p>Project Name</p>
+                  <p>로스트 아크 캐릭터 검색</p>
+                </li>
+                <li>
+                  <p>Skills</p>
+                  <p>React.js, SCSS, Rest API</p>
+                </li>
+                <li>
+                  <p>Detail</p>
+                  <p>api를 이용한 설명</p>  
+                </li>
+                <li>
+                  <p>Issue</p>
+                  <p>이슈사항</p>
+                </li>
+              </ul>
             </figcaption>
           </figure>
         </div>
         <div className="second">
           <figure>
-            <p>팀플 프로젝트 이미지 클릭하면 이동(배포 사이트)</p>
+            <div>
+              <img src="./img/team.png" alt="팀 프로젝트" />
+              <div>
+              <div className="dev-date">
+                <p>개발 기간</p>
+                <p>2023.02.23 ~ 2023.03.16</p>
+              </div>
+              <div className="web">
+                <Link to="https://poketmon-sns-nv1u.vercel.app/" target='_blank'>🚀Web View</Link>
+                <Link to="https://github.com/jumpjoong/poketmonSNS" target='_blank'>💻GITHUB</Link>
+              </div>
+            </div>
+              </div>
             <figcaption>
-              <p>팀플 프로젝트 이름</p>
-              <p>사용기술</p>
-              <p>api를 이용한 설명</p>
+              <ul>
+                <li>
+                  <p>Project Name</p>
+                  <p>PoketMonSNS</p>
+                </li>
+                <li>
+                  <p>Skills</p>
+                  <p>Next.js, SCSS, Next Auth, Prisma, MySQL, Chart.js</p>
+                </li>
+                <li>
+                  <p>Detail</p>
+                  <p>api를 이용한 설명</p>
+                </li>
+                <li>
+                  <p>Issue</p>
+                  <p>이슈사항</p>
+                </li>
+              </ul>
             </figcaption>
           </figure>
         </div>

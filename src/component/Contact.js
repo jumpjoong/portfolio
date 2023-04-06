@@ -27,7 +27,7 @@ function Contact() {
           <div className="info git">
             <p>깃허브</p>
             <div>
-              <Link to="https://github.com/jumpjoong" target='_blank'>https://github.com/jumpjoong</Link>
+              <Link to="https://github.com/jumpjoong" target='_blank'>GITHUB</Link>
             </div>
           </div>
         </div>

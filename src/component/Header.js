@@ -36,7 +36,7 @@ function Header() {
         </div>
       </div>
       <span className="header-second">
-        <Link to="/">HOME</Link>
+        <Link to="/" className="home">HOME</Link>
       </span>
       <span className="header-third">
         <p>Contact</p>

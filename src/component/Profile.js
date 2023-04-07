@@ -17,7 +17,41 @@ function Profile() {
         </div>
         <div className="second">
           <div className="time-line">
-            <p>타임라인</p>
+            <p>TIME LINE</p>
+            <ul>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+              <li>
+                <p>년도</p>
+                <p>있었던 일</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -11,112 +11,20 @@
     h2 {
       font-family: var(--engH2-font);
       font-size: 7rem;
+      color: white;
     }
   }
   .project-wrap {
-    overflow: hidden;
-    display: flex;
-    position: absolute;
-    top: 54%;
-    left: 0;
-    transform: translate(0, -50%);
-    transition: 1s;
-    ////전체 컨트롤
-    > div {
-      display: flex;
-      width: 100vw;
-      flex-shrink: 0;
-      padding-left: 5%;
-      figure {
-        display: flex;
-        //이미지 박스
-        > div{
-          width: 800px;
-          img {
-            width: 100%;
-            height: 450px;
-            margin-bottom: 50px;
-          }
-          > div {
-            .dev-date {
-              margin-bottom: 20px;
-              p {
-                font-family: var(--h1-font);
-                margin-bottom: 10px;
-                &:first-child {
-                  font-size: 2rem;
-                }
-                &:last-child {
-                  font-size: 1rem;
-                }
-              }
-            }
-            .web {
-              a {
-                font-family: var(--eng-font);
-                font-size: 1.2rem;
-                &:nth-child(1) {
-                  margin-right: 20px;
-                }
-              }
-            }
-          }
-        }
-        //프로젝트 설명글
-        figcaption {
-          margin-left: 50px;
-          ul {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            li {
-              width: 40%;
-              &:nth-child(-n+2) {
-                margin-bottom: 50px;
-              }
-              &:nth-child(odd) {
-                margin-right: 10%;
-              }
-              p {
-                &:first-child {
-                  //대제목
-                  font-size: 2.5rem;
-                  font-family: var(--hugeEng-font);
-                  margin-bottom: 15px;
-                }
-                //2줄 이상 컨트롤하는 영역
-                // &:nth-of-type(2) {
-                //   font-size: 1rem;
-                //   font-family: var(--h1-font);
-                //   width: 100%;
-                //   white-space: normal;
-                // }
-                //////////
-                &:last-child{
-                  //디테일 글
-                  display: inline-block;
-                  font-size: 1rem;
-                  font-family: var(--h1-font);
-                  width: 100%;
-                  white-space: normal;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    ///////////
-    .second {
-      figure {
-        figcaption {
-          ul {
-            li {
-              &:nth-child(odd) {
-                margin-right: 0;
-              }
-            }
-          }
+    .first {
+      .loa-img {
+        position: absolute;
+        right: 15%;
+        top: 25%;
+        width: 800px;
+        height: 700px;
+        img {
+          width: 100%;
+          height: 100%;
         }
       }
     }

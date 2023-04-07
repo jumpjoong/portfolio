@@ -1,0 +1,28 @@
+.profile {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  .profile-wrap {
+    height: 4000px;
+    ////전체 컨트롤 영역
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    > div {
+      border: 1px solid black;
+    }
+    .first{
+      height: 000px;
+      width: 30%;
+      margin-right: 5%;
+      position: sticky;
+      top: 8%;
+      background-color: blue;
+    }
+    .second{
+      width: 60%;
+      background-color: white;
+    }
+  }
+}

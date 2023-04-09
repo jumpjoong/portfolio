@@ -36,12 +36,16 @@ function Project() {
           </div>
         </div>
       </div>
-      <div className="project-detail">
+      <div className="project-write">
         <div className="project-name">
+          <p>USING SKILLS : React.js, SCSS, Rest API</p>
           <p>Project Name: 숙코검사기</p>
         </div>
-        <div className="project-skills">
-          <p>USING SKILLS : React.js, SCSS, Rest API</p>
+        <div className="project-detail">
+          <p>설명글</p>
+          <p>설명글</p>
+          <p>설명글</p>
+          <p>설명글</p>
         </div>
       </div>
     </div>

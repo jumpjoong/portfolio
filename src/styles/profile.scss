@@ -1,63 +1,49 @@
 .profile {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  .profile-wrap {
-    height: 4000px;
-    ////전체 컨트롤 영역
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: black;
-    > div {
-      border: 1px solid black;
-      &:nth-of-type(2) {
-        ul {
-          li {
-            position: relative;
-            border-left: 1px solid black;
-            padding-left: 30px;
-            &:not(:first-child , :last-child) {
-              padding: 10px 0 10px 30px;
-            }
-            &::before {
-              content: "";
-              display: inline-block;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              border: 1px solid black;
-              width: 2px;
-              height: 2px;
-              border-radius: 50%;
-              background-color: black;
-              transform: scale(3);
-            }
-            p {
-              font-size: 1.5rem;
-            }
-          }
-        }
+  height: calc(100vh - var(--header-height));
+  position: relative;
+  height: 2000px;
+  .profile-write {
+    position: absolute;
+    top: 3%;
+    left: 7%;
+    z-index: 9;
+    .introduce{
+      line-height: 1.2;
+      margin-bottom: 30px;
+      h2 {
+        font-family: var(--hugeEng-font);
+        font-size: 7rem;
       }
     }
-    .first{
-      height: 000px;
-      width: 30%;
-      margin-right: 5%;
-      position: sticky;
-      top: 8%;
-      background-color: blue;
+    .detail {
+      p {
+        font-size: 2rem;
+      }
     }
-    .second{
-      width: 60%;
-      background-color: white;
-      .time-line {
-        max-width: 700px;
+  }
+  .my-img {
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    .img-wrap {
+      width: 36.4583%;
+      height: 800px;
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+      img {
         width: 100%;
-        margin: 0 auto;
-        > p {
-          font-size: 4rem;
-          font-family: var(--hugeEng-font);
+        height: 100%;
+        border: 1px solid black;
+      }
+    }
+    .my-contact {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      p {
+        text-align: right;
+        &:nth-child(odd) {
+          font-weight: 800;
         }
       }
     }

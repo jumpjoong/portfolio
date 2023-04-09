@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../styles/skills.scss'
+import dummy from "../db/data.json"
 function Skills() {
-  const [up, setUp] = useState(false);
-  useEffect(()=> {
-    setTimeout(()=> setUp(!up), 500)
-    setTimeout(()=> setUp(up), 3000)
+  // const [up, setUp] = useState(false);
+  // useEffect(()=> {
+  //   setTimeout(()=> setUp(!up), 500)
+  //   setTimeout(()=> setUp(up), 3000)
     //eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-  console.log(up)
+  // },[])
+  console.log(dummy)
   return (
     <div className="skills">
-      <div className={up ? "alert down" : "alert"} >
+      {/* <div className={up ? "alert down" : "alert"} >
         <p>아이콘에 마우스를 올리면 정보가 나옵니다!</p>
-      </div>
+      </div> */}
       <div className="skills-wrap">
         <div className="front-skills">
           <p># FRONT-END</p>

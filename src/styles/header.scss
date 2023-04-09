@@ -76,6 +76,14 @@
     background-color: transparent;
     > a {
       background-color: transparent;
+      font-size: 1.5rem;
+      font-family: var(--hugeEng-h2);
+    }
+  }
+  .header-third{
+    p {
+      font-size: 1.5rem;
+      font-family: var(--hugeEng-h2);
     }
   }
 } 

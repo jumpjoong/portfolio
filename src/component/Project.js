@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../styles/project.scss";
 function Project() {
   const body = document.getElementsByTagName("body");
@@ -9,7 +8,7 @@ function Project() {
   const header = document.getElementsByClassName("header");
 
   useEffect(()=> {
-    body[0].style = `background-color: black`
+    body[0].style = `background-color: #424242`
     p[0].style = `color: white`
     a[0].style = `color: black`
     home[0].style = `color: white`
@@ -21,19 +20,28 @@ function Project() {
       home[0].style = `color: black`
       header[0].style = `border: none`
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   return (
     <div className="project">
       <div className="project-h2">
         <h2>CONTENT</h2>
-        <h2>CREATION: OUR</h2>
-        <h2>PROJECTS</h2>
+        <h2>CREATION: </h2>
+        <h2>PROJECT</h2>
       </div>
       <div className="project-wrap">
         <div className="first">
           <div className="loa-img">
-            <img src="./img/lostArk.png" alt="로아프로젝트" />
+            <img src="./img/abc.png" alt="로아프로젝트" />
           </div>
+        </div>
+      </div>
+      <div className="project-detail">
+        <div className="project-name">
+          <p>Project Name: 숙코검사기</p>
+        </div>
+        <div className="project-skills">
+          <p>USING SKILLS : React.js, SCSS, Rest API</p>
         </div>
       </div>
     </div>

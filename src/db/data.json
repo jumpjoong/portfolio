@@ -1,0 +1,78 @@
+{
+  "skills" : [
+    {
+      "name": "HTML5",
+      "detail": "설명",
+      "img": "./img/html5.svg"
+    },
+    {
+      "name": "CSS3",
+      "detail": "설명",
+      "img": "./img/css3.svg"
+    },
+    {
+      "name": "JavaScript(ES6)",
+      "detail": "설명",
+      "img": "./img/javascript_icon_130900.svg"
+    },
+    {
+      "name": "SCSS",
+      "detail": "설명",
+      "img": "./img/sass.svg"
+    },
+    {
+      "name": "React.js",
+      "detail": "설명",
+      "img": "./img/react.svg"
+    },
+    {
+      "name": "Next.js",
+      "detail": "설명",
+      "img": "./img/nextjs.svg"
+    },
+    {
+      "name": "Vue.js",
+      "detail": "설명",
+      "img": "./img/vueicon.svg"
+    },
+    {
+      "name": "Nuxt.js",
+      "detail": "설명",
+      "img": "./img/nuxticon.svg"
+    }
+  ],
+  "deploy": [
+    {
+      "name": "Vercel",
+      "detail": "설명",
+      "img": "./img/vercelicon.svg"
+    },
+    {
+      "name": "DotHome",
+      "detail": "설명",
+      "img": "./img/abc.svg"
+    }
+  ],
+  "tools": [
+    {
+      "name": "VS CODE",
+      "detail": "설명",
+      "img": "./img/vscode.svg"
+    },
+    {
+      "name": "GITGUB",
+      "detail": "설명",
+      "img": "./img/giticon.svg"
+    },
+    {
+      "name": "Figma",
+      "detail": "설명",
+      "img": "./img/figmaicon.svg"
+    },
+    {
+      "name": "Notion",
+      "detail": "설명",
+      "img": "./img/notionicon.svg"
+    }
+  ]
+}

@@ -17,12 +17,20 @@ function Profile() {
       <div className="my-img">
         <div className="img-wrap">
           <img src="./img/music.jpg" alt="사진" />
-        </div>
+        </div>  
         <div className="my-contact">
-          <p>NAME</p>
-          <p>김현중</p>
-          <p>CONTACT</p>
-          <p>+82 10-8844-0196</p>
+          <div className="name">
+            <p>NAME</p>
+            <p>KIM HYUN JOONG</p>
+          </div>
+          <div className="phone">
+            <p>PHONE</p>
+            <p>+82 10-8844-0196</p>
+          </div>
+          <div className="email">
+            <p>EMAIL</p>
+            <p>khj0196@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>

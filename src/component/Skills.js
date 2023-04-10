@@ -1,165 +1,121 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/skills.scss'
 import dummy from "../db/data.json"
 function Skills() {
-  // const [up, setUp] = useState(false);
-  // useEffect(()=> {
-  //   setTimeout(()=> setUp(!up), 500)
-  //   setTimeout(()=> setUp(up), 3000)
+  const [skill, setSkill] = useState({
+    name:dummy.skills[0].name,
+    detail:dummy.skills[0].detail
+  });
+  //이펙트 태그
+  const effectFirst = document.getElementsByClassName("effectFirst");
+  const effectSecond = document.getElementsByClassName("effectSecond");
+  const effectThird = document.getElementsByClassName("effectThird");
+  const effectCount = document.getElementsByClassName("count");
+  const skillsSecond = document.getElementsByClassName("name");
+  //글씨 이펙트 부분
+  useEffect(()=> {
+    skillsSecond[0].classList.add("abc")
+    setTimeout(()=> {
+      for (let i = 0; effectFirst.length > i; i++) {
+        effectFirst[i].classList.add("move")
+        effectCount[0].classList.add("move")
+      }
+      setTimeout(()=> {
+        for (let i = 0; effectSecond.length > i; i++) {
+          effectSecond[i].classList.add("move")
+          effectCount[1].classList.add("move")
+        }
+        setTimeout(()=> {
+          for (let i = 0; effectThird.length > i; i++) {
+            effectThird[i].classList.add("move")
+            effectCount[2].classList.add("move")
+          }
+        }, 300) 
+      }, 300)
+    },150)
+    clearTimeout()
     //eslint-disable-next-line react-hooks/exhaustive-deps
-  // },[])
-  console.log(dummy)
+  },[])
+
+  const skills = (key) => {
+    setSkill({
+      name:dummy.skills[key].name,
+      detail:dummy.skills[key].detail
+    })
+    ani()
+  }
+  const deploy = (key) => {
+    setSkill({
+      name:dummy.deploy[key].name,
+      detail:dummy.deploy[key].detail
+    })
+    ani()
+  }
+  const tools = (key) => {
+    setSkill({
+      name:dummy.tools[key].name,
+      detail:dummy.tools[key].detail
+    })
+    ani()
+  }
+  function ani () {
+    skillsSecond[0].classList.remove("abc")
+    skillsSecond[0].style.opacity = `0`
+    setTimeout(()=> {
+      skillsSecond[0].classList.add("abc")
+      skillsSecond[0].style.opacity = `1`
+    },100);
+    clearTimeout()
+  }
   return (
     <div className="skills">
-      {/* <div className={up ? "alert down" : "alert"} >
-        <p>아이콘에 마우스를 올리면 정보가 나옵니다!</p>
-      </div> */}
-      <div className="skills-wrap">
-        <div className="front-skills">
-          <p># FRONT-END</p>
-          <div className="skill-box">
-            <ul>
-              <li>
-                <figure>
-                  <img src="./img/html5.svg" alt="html5 아이콘" />
-                  <figcaption>
-                      <p>HTML5</p>
-                      <p>기본적인 태그를 이해하고 있으며 시멘틱태그를 사용해 마크업이 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/css3.svg" alt="css3 아이콘" />
-                  <figcaption>
-                    <p>CSS3</p>
-                    <p>position, display를 적절하게 사용하며 이벤트 사용이 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/sass.svg" alt="sass 아이콘" />
-                  <figcaption>
-                    <p>SCSS</p>
-                    <p>CSS3 보다 더 많이 사용했고 구조 파악이 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/javascript_icon_130900.svg" alt="javascript 아이콘" />
-                  <figcaption>
-                    <p>JavaScript(ES6)</p>
-                    <p>변수 선언에 대해 이해하고 있으며 다양한 event 추가가 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/react.svg" alt="react 아이콘" />
-                  <figcaption>
-                    <p>React.js</p>
-                    <p>다양한 Custum hook이 가능하고 CSR에 대해 이해하고 있습니다</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/nextjs.svg" alt="next 아이콘" />
-                  <figcaption>
-                    <p>Next.js</p>
-                    <p>DB와 연결을 할 줄 알고 SSR에 대해 이해하고 있습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/vueicon.svg" alt="vue 아이콘" />
-                  <figcaption>
-                    <p>Vue.js</p>
-                    <p>생태계가 작다보니 정보가 적지만 경험을 해봤습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/nuxticon.svg" alt="nuxt 아이콘" />
-                  <figcaption>
-                    <p>Nuxt.js</p>
-                    <p>SSR에 대해 이해하고 있고 경험을 해봤습니다. </p>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </div>
+      <div className="skills-view">
+        <div className="skills-first">
+          <h4>Detail</h4>
         </div>
-        <div className="deploy">
+        <div className="skills-second">
+          <p className="name">{skill.name}</p>
+          <p>{skill.detail}</p>
+        </div>
+        <div className="skills-list">
+          <div className="front">
+            <p># SKILLS</p>
+            <ul>
+              {
+                dummy.skills.map((obj, key)=> {
+                  return <li key={key} className="effectFirst">
+                    <img src={`${obj.img}`} alt="사진" onClick={()=>skills(key)}/>
+                  </li>
+                })
+              }
+            </ul>
+            <p className="count">+{dummy.skills.length}</p>
+          </div>
+          <div className="deploy">
           <p># DEPLOY</p>
-          <div className="deploy-box">
-            <ul>
-              <li>
-                <figure>
-                  <img src="./img/vercelicon.svg" alt="vercelicon  아이콘"/>
-                  <figcaption>
-                    <p>Vercel</p>
-                    <p>다양한 라이브러리로 배포한 경험이 있습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/abc.svg" alt="dothome 아이콘"/>
-                  <figcaption>
-                    <p>Dot Home</p>
-                    <p>File Zilla 를 통한 배포한 경험이 있습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
+          <ul>
+            {
+                dummy.deploy.map((obj, key)=> {
+                  return <li key={key} className="effectSecond">
+                    <img src={`${obj.img}`} alt="사진" onClick={()=>deploy(key)}/>
+                  </li>
+                })
+            }
+          </ul>
+          <p className="count">+{dummy.deploy.length}</p>
           </div>
-        </div>
-        <div className="using">
-          <p># USING TOOL</p>
-          <div className="using-box">
+          <div className="tools">
+            <p># USING TOOLS</p>
             <ul>
-              <li>
-                <figure>
-                  <img src="./img/vscode.svg" alt="vscode 아이콘"/>
-                  <figcaption>
-                    <p>VS CODE</p>
-                    <p>자주 사용하는 툴이며 터미널 사용법을 알고 있습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/giticon.svg" alt="깃허브 아이콘"/>
-                  <figcaption>
-                    <p>GitHub</p>
-                    <p>branch관리가 가능하며 git 명령어 사용법을 알고있습니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/figmaicon.svg" alt="피그마 아이콘"/>
-                  <figcaption>
-                    <p>Figma</p>
-                    <p>이미지 다운, 폰트 확인 등등 확인이 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="./img/notionicon.svg" alt="노션 아이콘"/>
-                  <figcaption>
-                    <p>Notion</p>
-                    <p>Notion을 통한 협업이 가능합니다.</p>
-                  </figcaption>
-                </figure>
-              </li>
+              {
+                dummy.tools.map((obj, key)=> {
+                  return <li key={key} className="effectThird">
+                    <img src={`${obj.img}`} alt="사진" onClick={()=>tools(key)}/>
+                  </li>
+                })
+              }
             </ul>
+            <p className="count">+{dummy.tools.length}</p>
           </div>
         </div>
       </div>

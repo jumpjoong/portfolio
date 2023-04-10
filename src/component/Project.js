@@ -9,12 +9,12 @@ function Project() {
 
   useEffect(()=> {
     body[0].style = `background-color: #424242`
-    p[0].style = `color: white`
+    p[0].style = `color:  white`
     a[0].style = `color: black`
     home[0].style = `color: white`
-    header[0].style = `border-bottom: 1px solid white`
+    header[0].style = `border-bottom: 1px solid #ffffffa4`
     return ()=> {
-      body[0].style = `background-color: white`
+      body[0].style = `background-color: #f6f6f6`
       p[0].style = `color: black`
       a[0].style = `color: black`
       home[0].style = `color: black`
@@ -39,7 +39,7 @@ function Project() {
       <div className="project-write">
         <div className="project-name">
           <p>USING SKILLS : React.js, SCSS, Rest API</p>
-          <p>Project Name: 숙코검사기</p>
+          <p>PROJECT NAME: 숙코검사기</p>
         </div>
         <div className="project-detail">
           <p>설명글</p>

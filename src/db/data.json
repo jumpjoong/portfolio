@@ -11,7 +11,7 @@
       "img": "./img/css3.svg"
     },
     {
-      "name": "JavaScript(ES6)",
+      "name": "JAVASCRIPT",
       "detail": "설명",
       "img": "./img/javascript_icon_130900.svg"
     },
@@ -21,34 +21,34 @@
       "img": "./img/sass.svg"
     },
     {
-      "name": "React.js",
+      "name": "REACT",
       "detail": "설명",
       "img": "./img/react.svg"
     },
     {
-      "name": "Next.js",
+      "name": "NEXT JS",
       "detail": "설명",
       "img": "./img/nextjs.svg"
     },
     {
-      "name": "Vue.js",
+      "name": "VUE",
       "detail": "설명",
       "img": "./img/vueicon.svg"
     },
     {
-      "name": "Nuxt.js",
+      "name": "NUXT",
       "detail": "설명",
       "img": "./img/nuxticon.svg"
     }
   ],
   "deploy": [
     {
-      "name": "Vercel",
+      "name": "VERCEL",
       "detail": "설명",
       "img": "./img/vercelicon.svg"
     },
     {
-      "name": "DotHome",
+      "name": "DOTHOME",
       "detail": "설명",
       "img": "./img/abc.svg"
     }
@@ -65,12 +65,12 @@
       "img": "./img/giticon.svg"
     },
     {
-      "name": "Figma",
+      "name": "FIGMA",
       "detail": "설명",
       "img": "./img/figmaicon.svg"
     },
     {
-      "name": "Notion",
+      "name": "NOTION",
       "detail": "설명",
       "img": "./img/notionicon.svg"
     }

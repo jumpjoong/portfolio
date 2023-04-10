@@ -1,5 +1,5 @@
 .header {
-  padding: 20px 40px 0 40px;
+  padding: 20px 40px 20px 40px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -76,6 +76,14 @@
     background-color: transparent;
     > a {
       background-color: transparent;
+      font-size: 1.5rem;
+      font-family: var(--hugeEng-h2);
+    }
+  }
+  .header-third{
+    p {
+      font-size: 1.5rem;
+      font-family: var(--hugeEng-h2);
     }
   }
 } 

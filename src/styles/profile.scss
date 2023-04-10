@@ -1,28 +1,51 @@
 .profile {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  .profile-wrap {
-    height: 4000px;
-    ////전체 컨트롤 영역
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: black;
-    > div {
-      border: 1px solid black;
+  height: calc(100vh - var(--header-height));
+  position: relative;
+  height: 2000px;
+  .profile-write {
+    position: absolute;
+    top: 3%;
+    left: 7%;
+    z-index: 9;
+    .introduce{
+      line-height: 1.2;
+      margin-bottom: 30px;
+      h2 {
+        font-family: var(--hugeEng-font);
+        font-size: 7rem;
+      }
     }
-    .first{
-      height: 000px;
-      width: 30%;
-      margin-right: 5%;
-      position: sticky;
-      top: 8%;
-      background-color: blue;
+    .detail {
+      p {
+        font-size: 2rem;
+      }
     }
-    .second{
-      width: 60%;
-      background-color: white;
+  }
+  .my-img {
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    .img-wrap {
+      width: 36.4583%;
+      height: 800px;
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+      img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+      }
+    }
+    .my-contact {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      p {
+        text-align: right;
+        &:nth-child(odd) {
+          font-weight: 800;
+        }
+      }
     }
   }
 }

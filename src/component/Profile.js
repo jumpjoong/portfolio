@@ -4,21 +4,25 @@ import '../styles/profile.scss'
 function Profile() {
   return (
     <div className="profile">
-      <div className="profile-wrap">
-        <div className="first">
-          <figure>
-            <div>
-              <img src="./img/music.jpg" alt="무식은나의삶이다"/>
-            </div>
-            <figcaption>
-              <p>설명글 영역</p>
-            </figcaption>
-          </figure>
+      <div className="profile-write">
+        <div className="introduce">
+          <h2>Introduce</h2>
+          <h2>my self and my</h2>
+          <h2>info</h2>
         </div>
-        <div className="second">
-          <div className="time-line">
-            <p>타임라인</p>
-          </div>
+        <div className="detail">
+          <p>간단한 자기소개글</p>
+        </div>
+      </div>
+      <div className="my-img">
+        <div className="img-wrap">
+          <img src="./img/music.jpg" alt="사진" />
+        </div>
+        <div className="my-contact">
+          <p>NAME</p>
+          <p>김현중</p>
+          <p>CONTACT</p>
+          <p>+82 10-8844-0196</p>
         </div>
       </div>
     </div>

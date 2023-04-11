@@ -35,29 +35,29 @@ function Skills() {
     },150)
     clearTimeout()
     //eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[]);
   const skills = (key) => {
     setSkill({
       name:dummy.skills[key].name,
       detail:dummy.skills[key].detail
-    })
-    ani()
+    });
+    ani();
   }
   
   const deploy = (key) => {
     setSkill({
       name:dummy.deploy[key].name,
       detail:dummy.deploy[key].detail
-    })
-    ani()
+    });
+    ani();
   }
   const tools = (key) => {
     setSkill({
       name:dummy.tools[key].name,
       detail:dummy.tools[key].detail
     })
-    ani()
-  }
+    ani();
+  };
   function ani () {
     skillsSecond[0].classList.remove("abc")
     skillsSecond[0].style.opacity = `0`
@@ -65,23 +65,24 @@ function Skills() {
       skillsSecond[0].classList.add("abc")
       skillsSecond[0].style.opacity = `1`
     },100);
-    clearTimeout()
-  }
+    clearTimeout();
+  };
   /////튀어오르는 효과
-  const ran = [effectFirst, effectSecond, effectThird]
-  let idx
+  const ran = [effectFirst, effectSecond, effectThird];
+  let idx;
   setInterval(()=> {
     //각 이미지 태그 잡은 랜덤 변수 
     const num = Math.floor(Math.random() * ran.length);
     //num의 지정된 배열의 랜덤 길이
     const num1 = Math.floor(Math.random() * ran[num].length);
     //idx에 값이 있을 경우 클래스 없애는 함수
-    if (idx){
-      idx.remove("bounce")
+    if (idx) {
+      idx.remove("bounce");
     }
     idx = ran[num][num1].classList;
-    idx.add("bounce")
-  }, 5000)
+    idx.add("bounce");
+    clearInterval();
+  }, 5000);
   return (
     <div className="skills">
       <div className="skills-view">

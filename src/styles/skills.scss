@@ -59,7 +59,7 @@
         }
         ul {
           width: 100%;
-          overflow: hidden;
+          // overflow: hidden;
           display: flex;
           align-items: center;
           // justify-content: space-around;
@@ -79,11 +79,15 @@
             transform: translateY(0);
             opacity: 1;
           }
+          .bounce {
+            animation: tong 0.5s infinite alternate;
+          }
         }
       }
     }
   }
 }
+
 @keyframes up {
   from {
     transform: translateY(100%);
@@ -91,5 +95,13 @@
   } to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes tong {
+  from {
+    transform: translateY(0);
+  } to {
+    transform: translateY(-15px);
   }
 }

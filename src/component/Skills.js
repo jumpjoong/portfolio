@@ -1,121 +1,183 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { AppC } from '../context/MyContect';
 import '../styles/skills.scss'
-import dummy from "../db/data.json"
+
 function Skills() {
+  const {dummy} = useContext(AppC)
+  const [tag, setTag] = useState(null);
+  const value = Object.values(dummy.skill);
+  const bounce = useRef(null);
   const [skill, setSkill] = useState({
-    name:dummy.skills[0].name,
-    detail:dummy.skills[0].detail
+    name:dummy.skill.skills[0].name,
+    detail:dummy.skill.skills[0].detail
   });
   //이펙트 태그
   const effectFirst = document.getElementsByClassName("effectFirst");
   const effectSecond = document.getElementsByClassName("effectSecond");
   const effectThird = document.getElementsByClassName("effectThird");
-  const effectCount = document.getElementsByClassName("count");
   const skillsSecond = document.getElementsByClassName("name");
+  const skillsDetail = document.getElementsByClassName("detail");
   //글씨 이펙트 부분
   useEffect(()=> {
-    skillsSecond[0].classList.add("abc")
+    skillsSecond[0].classList.add("abc");
+    skillsDetail[0].classList.add("abc");
     setTimeout(()=> {
       for (let i = 0; effectFirst.length > i; i++) {
-        effectFirst[i].classList.add("move")
-        effectCount[0].classList.add("move")
-      }
+        effectFirst[i].classList.add("move");
+      };
       setTimeout(()=> {
         for (let i = 0; effectSecond.length > i; i++) {
-          effectSecond[i].classList.add("move")
-          effectCount[1].classList.add("move")
-        }
+          effectSecond[i].classList.add("move");
+        };
         setTimeout(()=> {
           for (let i = 0; effectThird.length > i; i++) {
-            effectThird[i].classList.add("move")
-            effectCount[2].classList.add("move")
-          }
-        }, 300) 
-      }, 300)
-    },150)
-    clearTimeout()
+            effectThird[i].classList.add("move");
+          };
+        }, 300);
+      }, 300);
+    },150);
+    clearTimeout();
+    animai();
+    return () => {
+      console.log("실행되나?", stopAnimai());
+      stopAnimai();
+    };
     //eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-
-  const skills = (key) => {
-    setSkill({
-      name:dummy.skills[key].name,
-      detail:dummy.skills[key].detail
-    })
-    ani()
-  }
-  const deploy = (key) => {
-    setSkill({
-      name:dummy.deploy[key].name,
-      detail:dummy.deploy[key].detail
-    })
-    ani()
-  }
-  const tools = (key) => {
-    setSkill({
-      name:dummy.tools[key].name,
-      detail:dummy.tools[key].detail
-    })
-    ani()
-  }
+  },[]);
+  //클릭 이벤트의 바운스 애니메이션
+  function bounceAni (e)  {
+    e.target.parentNode.classList.add("bounce");
+    setTimeout(()=> {
+      e.target.parentNode.classList.remove("bounce");
+    }, 5000);
+  };
+  //대표 글씨 출력하는 부분 애니메이션
   function ani () {
     skillsSecond[0].classList.remove("abc")
     skillsSecond[0].style.opacity = `0`
+    skillsDetail[0].classList.remove("abc")
+    skillsDetail[0].style.opacity = `0`
     setTimeout(()=> {
       skillsSecond[0].classList.add("abc")
       skillsSecond[0].style.opacity = `1`
+      skillsDetail[0].classList.add("abc")
+      skillsDetail[0].style.opacity = `1`
     },100);
-    clearTimeout()
+    clearTimeout();
+  };
+  //animai 멈춤
+  function stopAnimai () {
+    if (tag) {
+      tag.remove("bounce");
+    };
+    clearInterval(bounce.current);
+    idx = undefined;
+  };
+  //////////클릭 이벤트들
+  const skills = (key, e) => {
+    setSkill({
+      name:dummy.skill.skills[key].name,
+      detail:dummy.skill.skills[key].detail
+    });
+    ani();
+    bounceAni(e);
+    stopAnimai();
+  };
+  const deploy = (key, e) => {
+    setSkill({
+      name:dummy.skill.deploy[key].name,
+      detail:dummy.skill.deploy[key].detail
+    });
+    ani();
+    bounceAni(e);
+    stopAnimai();
+  };
+  const tools = (key, e) => {
+    setSkill({
+      name:dummy.skill.tools[key].name,
+      detail:dummy.skill.tools[key].detail
+    })
+    ani();
+    bounceAni(e);
+    stopAnimai();
+  };
+  ///////////
+
+  /////바운스 효과
+  let idx;
+
+  function animai () {
+    bounce.current = setInterval(()=> {
+      const ran = [effectFirst, effectSecond, effectThird];
+      //각 이미지 태그 잡은 랜덤 변수 
+      const num = Math.floor(Math.random() * ran.length);
+      //num의 지정된 배열의 랜덤 길이
+      const num1 = Math.floor(Math.random() * ran[num].length);
+      //idx에 값이 있을 경우 클래스 없애는 함수
+      if (idx) {
+        idx.remove("bounce");
+      }
+      
+      idx = ran[num][num1].classList;
+      if (idx) {
+        setTag(idx)
+      }
+      //바운스 효과가 들어간 태그 출력
+      setSkill({
+        name: value[num][num1].name,
+        detail: value[num][num1].detail
+      })
+      ani();
+      idx.add("bounce");
+    }, 4000);
   }
+  
   return (
     <div className="skills">
       <div className="skills-view">
         <div className="skills-first">
-          <h4>Detail</h4>
+          <h4>MY SKILLS</h4>
         </div>
         <div className="skills-second">
           <p className="name">{skill.name}</p>
-          <p>{skill.detail}</p>
+          <p className="detail">{skill.detail}</p>
         </div>
         <div className="skills-list">
           <div className="front">
             <p># SKILLS</p>
             <ul>
               {
-                dummy.skills.map((obj, key)=> {
+                dummy.skill.skills.map((obj, key)=> {
                   return <li key={key} className="effectFirst">
-                    <img src={`${obj.img}`} alt="사진" onClick={()=>skills(key)}/>
+                    <img src={`${obj.img}`} alt="사진" onClick={(e)=>skills(key, e)}/>
                   </li>
                 })
               }
             </ul>
-            <p className="count">+{dummy.skills.length}</p>
           </div>
           <div className="deploy">
           <p># DEPLOY</p>
           <ul>
             {
-                dummy.deploy.map((obj, key)=> {
+                dummy.skill.deploy.map((obj, key)=> {
                   return <li key={key} className="effectSecond">
-                    <img src={`${obj.img}`} alt="사진" onClick={()=>deploy(key)}/>
+                    <img src={`${obj.img}`} alt="사진" onClick={(e)=>deploy(key, e)}/>
                   </li>
                 })
             }
           </ul>
-          <p className="count">+{dummy.deploy.length}</p>
           </div>
           <div className="tools">
             <p># USING TOOLS</p>
             <ul>
               {
-                dummy.tools.map((obj, key)=> {
+                dummy.skill.tools.map((obj, key)=> {
                   return <li key={key} className="effectThird">
-                    <img src={`${obj.img}`} alt="사진" onClick={()=>tools(key)}/>
+                    <img src={`${obj.img}`} alt="사진" onClick={(e)=>tools(key, e)}/>
                   </li>
                 })
               }
             </ul>
-            <p className="count">+{dummy.tools.length}</p>
           </div>
         </div>
       </div>

@@ -1,78 +1,94 @@
 {
-  "skills" : [
+  "skill": {
+    "skills" : [
+      {
+        "name": "HTML5",
+        "detail": "기본적인 태그를 이해하고 있으며 시멘틱태그를 사용해 마크업이 가능합니다.",
+        "img": "./img/html5.svg"
+      },
+      {
+        "name": "CSS3",
+        "detail": "position, display를 적절하게 사용 가능하며 다양한 기능 추가가 가능합니다.",
+        "img": "./img/css3.svg"
+      },
+      {
+        "name": "JAVASCRIPT",
+        "detail": "변수 선언에 대해 이해하고 있으며 다양한 event 추가가 가능합니다.",
+        "img": "./img/javascript_icon_130900.svg"
+      },
+      {
+        "name": "SCSS",
+        "detail": "CSS보다 더 많이 사용하였으며 구조 파악이 가능합니다.",
+        "img": "./img/sass.svg"
+      },
+      {
+        "name": "REACT",
+        "detail": "가장 좋아하는 라이브러리이며 다양한 hook 사용이 가능합니다.",
+        "img": "./img/react.svg"
+      },
+      {
+        "name": "NEXT JS",
+        "detail": "DB와 연결을 한 경험이 있고 SSR에 대해 이해하고 있습니다.",
+        "img": "./img/nextjs.svg"
+      },
+      {
+        "name": "VUE",
+        "detail": "생태계가 작다보니 정보가 적지만 경험을 해보았습니다.",
+        "img": "./img/vueicon.svg"
+      },
+      {
+        "name": "NUXT",
+        "detail": "VUE 개발을 하면서 NUXT 개발을 해본 경험이 있습니다.",
+        "img": "./img/nuxticon.svg"
+      }
+    ],
+    "deploy": [
+      {
+        "name": "VERCEL",
+        "detail": "DB를 연동시켜 배포를 한 경험이 있습니다.",
+        "img": "./img/vercelicon.svg"
+      },
+      {
+        "name": "DOTHOME",
+        "detail": "FILE ZILLA를 통해 배포한 경험이 있습니다.",
+        "img": "./img/abc.svg"
+      }
+    ],
+    "tools": [
+      {
+        "name": "VS CODE",
+        "detail": "가장 많이 사용하는 툴이며 터미널 사용법을 알고 있습니다.",
+        "img": "./img/vscode.svg"
+      },
+      {
+        "name": "GITGUB",
+        "detail": "branch관리가 가능하며 git 명령어를 통해 사용이 가능합니다.",
+        "img": "./img/giticon.svg"
+      },
+      {
+        "name": "FIGMA",
+        "detail": "이미지 다운, 폰트 확인 등 기본적인 디자인 확인이 가능합니다.",
+        "img": "./img/figmaicon.svg"
+      },
+      {
+        "name": "NOTION",
+        "detail": "NOTION을 통한 협업이 가능합니다.",
+        "img": "./img/notionicon.svg"
+      }
+    ]
+  },
+  "project": [
     {
-      "name": "HTML5",
-      "detail": "설명",
-      "img": "./img/html5.svg"
+      "projectName": "원정대 검사",
+      "img": "./img/lostArk.png",
+      "alt": "로아프로젝트",
+      "usingSkill": "REACT, SCSS, Rest API"
     },
     {
-      "name": "CSS3",
-      "detail": "설명",
-      "img": "./img/css3.svg"
-    },
-    {
-      "name": "JAVASCRIPT",
-      "detail": "설명",
-      "img": "./img/javascript_icon_130900.svg"
-    },
-    {
-      "name": "SCSS",
-      "detail": "설명",
-      "img": "./img/sass.svg"
-    },
-    {
-      "name": "REACT",
-      "detail": "설명",
-      "img": "./img/react.svg"
-    },
-    {
-      "name": "NEXT JS",
-      "detail": "설명",
-      "img": "./img/nextjs.svg"
-    },
-    {
-      "name": "VUE",
-      "detail": "설명",
-      "img": "./img/vueicon.svg"
-    },
-    {
-      "name": "NUXT",
-      "detail": "설명",
-      "img": "./img/nuxticon.svg"
-    }
-  ],
-  "deploy": [
-    {
-      "name": "VERCEL",
-      "detail": "설명",
-      "img": "./img/vercelicon.svg"
-    },
-    {
-      "name": "DOTHOME",
-      "detail": "설명",
-      "img": "./img/abc.svg"
-    }
-  ],
-  "tools": [
-    {
-      "name": "VS CODE",
-      "detail": "설명",
-      "img": "./img/vscode.svg"
-    },
-    {
-      "name": "GITGUB",
-      "detail": "설명",
-      "img": "./img/giticon.svg"
-    },
-    {
-      "name": "FIGMA",
-      "detail": "설명",
-      "img": "./img/figmaicon.svg"
-    },
-    {
-      "name": "NOTION",
-      "detail": "설명",
-      "img": "./img/notionicon.svg"
+      "projectName": "pokemonSNS",
+      "img": "./img/pokemon.png",
+      "alt": "팀프로젝트",
+      "usingSkill": "NEXT JS, MySQL, Next Auth, PRISMA, Chart.js, SCSS"
     }
   ]
 }

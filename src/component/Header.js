@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { AppC } from "../context/MyContect";
 import "../styles/header.scss";
 import { Link } from "react-router-dom";
+import openImg from "../images/open.svg"
+import closeImg from "../images/close.svg"
 
 function Header() {
   const { reverse, aaa } = useContext(AppC);
@@ -16,10 +18,10 @@ function Header() {
   return (
     <header className="header">
       <div className="header-first" onClick={(e)=>check(e)}>
-        <img src="./img/open.svg" alt="버거메뉴"  onClick={reverse} />
+        <img src={openImg} alt="버거메뉴"  onClick={reverse} />
         <div className={aaa ? "burger on" : "burger"}>
           <ul>
-            <li><img src="./img/close.svg" alt="버거메뉴"/></li>
+            <li><img src={closeImg} alt="버거메뉴"/></li>
             <li>
               <Link to={"/profile"}>Profile</Link>
             </li>
@@ -39,7 +41,6 @@ function Header() {
         <Link to="/" className="home">HOME</Link>
       </span>
       <span className="header-third">
-        <p>Contact</p>
       </span>
     </header>
   );

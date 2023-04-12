@@ -4,8 +4,8 @@
   position: relative;
   .profile-write {
     position: absolute;
-    top: 3%;
-    left: 7%;
+    top: 0%;
+    left: 5%;
     z-index: 9;
     .introduce{
       line-height: 1.2;
@@ -16,8 +16,11 @@
       }
     }
     .detail {
+      margin-bottom: 20%;
       p {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-family: var(--kor-font);
+        line-height: 1.5;
       }
     }
   }

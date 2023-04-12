@@ -11,7 +11,12 @@ function Profile() {
           <h2>info</h2>
         </div>
         <div className="detail">
-          <p>간단한 자기소개글</p>
+          <p>새로운 기술을 배우는 것에 두려움이 없고 꾸준함과 성실함을 중요하게 생각합니다.</p>
+          <p>항상 초심을 잃지 않고 꾸준하게 성장할 자신이 있습니다.</p>
+          <p>성실하고 꾸준한 개발자가 되고 싶은 김현중입니다. </p>
+        </div>
+        <div className="resume">
+          <p>이력서 다운로드</p>
         </div>
       </div>
       <div className="my-img">

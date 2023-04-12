@@ -65,6 +65,17 @@ function Skills() {
     },100);
     clearTimeout();
   };
+  //5초뒤 바운스 효과 재시작
+  let sum
+  function restart () {
+    sum = setTimeout(() => {
+      clearInterval(bounce.current);
+      animai();
+    }, 5000);
+  };
+  function stopRestart () {
+    clearTimeout(sum);
+  }
   //animai 멈춤
   function stopAnimai () {
     if (tag) {
@@ -82,6 +93,8 @@ function Skills() {
     ani();
     bounceAni(e);
     stopAnimai();
+    stopRestart();
+    restart();
   };
   const deploy = (key, e) => {
     setSkill({
@@ -91,6 +104,8 @@ function Skills() {
     ani();
     bounceAni(e);
     stopAnimai();
+    stopRestart();
+    restart();
   };
   const tools = (key, e) => {
     setSkill({
@@ -100,6 +115,8 @@ function Skills() {
     ani();
     bounceAni(e);
     stopAnimai();
+    stopRestart();
+    restart();
   };
   ///////////
 

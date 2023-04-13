@@ -49,7 +49,7 @@ function Skills() {
     e.target.parentNode.classList.add("bounce");
     setTimeout(()=> {
       e.target.parentNode.classList.remove("bounce");
-    }, 5000);
+    }, 3000);
   };
   //대표 글씨 출력하는 부분 애니메이션
   function ani () {
@@ -71,8 +71,9 @@ function Skills() {
     sum = setTimeout(() => {
       clearInterval(bounce.current);
       animai();
-    }, 5000);
+    }, 4000);
   };
+  //restart 멈춤
   function stopRestart () {
     clearTimeout(sum);
   }

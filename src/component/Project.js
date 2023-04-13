@@ -6,7 +6,6 @@ import "../styles/portfolio-carousel.css";
 
 function Project() {
     useEffect(() => {
-    
         const script = document.createElement("script");
         script.src = "./plugin/momentum-slider.js";
         script.defer = "defer";

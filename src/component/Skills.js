@@ -6,6 +6,7 @@ function Skills() {
   const {dummy} = useContext(AppC)
   const [tag, setTag] = useState(null);
   const value = Object.values(dummy.skill);
+  const concatValue = value[0].concat(value[1],value[2])
   const bounce = useRef(null);
   const [skill, setSkill] = useState({
     name:dummy.skill.skills[0].name,
@@ -39,7 +40,6 @@ function Skills() {
     clearTimeout();
     animai();
     return () => {
-      console.log("실행되나?", stopAnimai());
       stopAnimai();
     };
     //eslint-disable-next-line react-hooks/exhaustive-deps
@@ -126,30 +126,45 @@ function Skills() {
 
   function animai () {
     bounce.current = setInterval(()=> {
-      const ran = [effectFirst, effectSecond, effectThird];
+      //각각의 li
+      const elList = [...effectFirst, ...effectSecond, ...effectThird];
       //각 이미지 태그 잡은 랜덤 변수 
-      const num = Math.floor(Math.random() * ran.length);
-      //num의 지정된 배열의 랜덤 길이
-      const num1 = Math.floor(Math.random() * ran[num].length);
+      const num = Math.floor(Math.random() * elList.length);
+      //elList 키값 반환
+      const check = Object.keys(elList);
+      //먼저 넣어야함
       //idx에 값이 있을 경우 클래스 없애는 함수
       if (idx) {
-        idx.remove("bounce");
+        idx.classList.remove("bounce");
+        if (idx.classList == elList[num].classList) {
+          const abc = check.filter((obj)=> obj !== num);
+          const num1 = Math.floor(Math.random() * abc.length);
+          idx = elList[num1];
+          setSkill({
+            name: concatValue[num1].name,
+            detail: concatValue[num1].detail
+          })
+          console.log("중복")
+        } else {
+          idx = elList[num];
+          setSkill({
+            name: concatValue[num].name,
+            detail: concatValue[num].detail
+          })
+        }
+      }else {
+        idx = elList[num]
+        setSkill({
+          name: concatValue[num].name,
+          detail: concatValue[num].detail
+        })
       }
-      
-      idx = ran[num][num1].classList;
-      if (idx) {
-        setTag(idx)
-      }
+      setTag(idx.classList);
       //바운스 효과가 들어간 태그 출력
-      setSkill({
-        name: value[num][num1].name,
-        detail: value[num][num1].detail
-      })
       ani();
-      idx.add("bounce");
-    }, 4000);
+      idx.classList.add("bounce");
+    }, 2000);
   }
-  
   return (
     <div className="skills">
       <div className="skills-view">

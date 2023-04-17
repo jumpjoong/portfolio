@@ -21,7 +21,7 @@ function Profile() {
       </div>
       <div className="my-img">
         <div className="img-wrap">
-          <img src="./img/.jpg" alt="사진" />
+          <img src="./img/me.jpg" alt="사진" />
         </div>  
         <div className="my-contact">
           <div className="name">

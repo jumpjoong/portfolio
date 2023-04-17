@@ -42,7 +42,7 @@
     el: slidersContainer,
     cssClass: "ms--links",
     range: [0, 1],
-    link:['http://khj0196.dothome.co.kr/','https://poketmon-sns-nv1u.vercel.app/'],
+    link:['https://github.com/jumpjoong/lostArk','https://github.com/jumpjoong/poketmonSNS'],
     rangeContent: function (i) {
       return `<a class="ms-slide__link" href="${this.link[this.range[i]]}" target="_blank" style="color: white">View Case</a>`;
     },

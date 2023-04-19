@@ -68,16 +68,13 @@ function Skills() {
     clearTimeout();
   };
   //3초뒤 바운스 효과 재시작
-  let sum
   function restart () {
-    sum = setTimeout(() => {
+    setTimeout(() => {
       clearInterval(bounce.current);
       animai();
     }, 4000);
   };
   //class 없앰
- 
-  
   function deleteClass (idx) {
 
     const elList = [...effectFirst, ...effectSecond, ...effectThird];
@@ -89,56 +86,50 @@ function Skills() {
         elList.forEach(s=>{
           s.classList.remove("bounce");
         });
-        
         break;
     }
- 
-  }
-  //restart 멈춤
-  function stopRestart () {
-    clearTimeout(sum);
+
   }
   //animai 멈춤
   function stopAnimai () {
     clearInterval(bounce.current);
     idx = undefined;
   };
+  //각 li 클릭 시 이벤트 컨트롤
+  function allEvent (e) {
+    //전에 작동하던 애니메이션 클래스 없애기
+    deleteClass({type:"click"})
+    //대표 글씨 출력
+    ani();
+    //바운스 애니메이션
+    bounceAni(e);
+    //전에 작동하던 animai 멈춤
+    stopAnimai();
+    //재시작
+    restart();
+  }
+  
   //////////클릭 이벤트들
   const skills = (key, e) => {
     setSkill({
       name:dummy.skill.skills[key].name,
       detail:dummy.skill.skills[key].detail
     });
-    deleteClass({type:"click"})
-    ani();
-    bounceAni(e);
-    stopAnimai();
-    stopRestart();
-    restart();
+    allEvent(e);
   };
   const deploy = (key, e) => {
     setSkill({
       name:dummy.skill.deploy[key].name,
       detail:dummy.skill.deploy[key].detail
     });
-    deleteClass({type:"click"})
-    ani();
-    bounceAni(e);
-    stopAnimai();
-    stopRestart();
-    restart();
+    allEvent(e);
   };
   const tools = (key, e) => {
     setSkill({
       name:dummy.skill.tools[key].name,
       detail:dummy.skill.tools[key].detail
-    })
-    deleteClass({type:"click"})
-    ani();
-    bounceAni(e);
-    stopAnimai();
-    stopRestart();
-    restart();
+    });
+    allEvent(e);
   };
   ///////////
   

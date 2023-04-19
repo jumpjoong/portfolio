@@ -116,7 +116,7 @@
 
 .ms--numbers {
   position: absolute;
-  left: calc(60% - 380px);
+  left: calc(58% - 380px);
   top: calc(60% - 300px);
   z-index: -1;
   pointer-events: none;
@@ -265,7 +265,7 @@
 .ms--links {
   position: absolute;
   left: calc(60% - 420px);
-  top: calc(63% + 105px);
+  top: calc(65% + 105px);
   z-index: 1;
   color: white;
 }
@@ -337,20 +337,21 @@
 
 @media screen and (max-width: 1024px) {
   .ms--numbers {
-    left: calc(12% - 120px);
-    top: calc(80% - 300px);
+    left: calc(20% - 120px);
+    top: calc(65% - 300px);
   }
   .ms--titles {
     left: calc(50% - 200px);
-    top: calc(85% - 135px);
+    top: calc(70% - 135px);
     text-align: center;
   }
   .ms-slide {
     justify-content: center !important;
   }
   .ms--links {
-    left: calc(50% - 60px);
-    top: calc(80% + 80px);
+    left: calc(50%);
+    transform: translateX(-50%);
+    top: calc(75% + 80px);
   }
   .pagination {
     left: 50%;
@@ -398,10 +399,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height));
 }
 
 .sliders-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

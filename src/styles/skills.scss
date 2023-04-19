@@ -1,4 +1,7 @@
 .skills {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   height: calc(100vh - var(--header-height));
   position: relative;
   .skills-view {
@@ -12,11 +15,9 @@
       }
     }
     .skills-second {
-      height: 128px;
       display: flex;
       align-items: center;
-      margin-bottom: 80px;
-      margin-top: 50px;
+      margin: 4.629% 0 6.407% 0;
       overflow: hidden;
       .name {
         position: relative;
@@ -35,13 +36,13 @@
     }
     .skills-list {
       > div {
-        padding: 40px 0;
+        padding: 3.703% 0;
         border-top: 1px solid black;
         display: flex;
         /////각 스킬 종류 이름
         > p {
           &:first-child {
-            margin-right: 40px;
+            margin-right: 2.083%;
             display: flex;
             align-items: center;
             width: 15%;
@@ -70,7 +71,7 @@
           height: auto;
           li {
             width: 7%;
-            margin-right: 50px;
+            margin-right: 2.60416%;
             position: relative;
             transform: translateY(50%);
             opacity: 0;
@@ -109,7 +110,7 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .skills {
     .skills-view {
       padding: 0;
@@ -121,7 +122,8 @@
           font-size: 4rem;
         }
         .detail {
-          height: 88px;
+          padding-top: 1.851%;
+          height: 100px;
         }
       }
       .skills-list {

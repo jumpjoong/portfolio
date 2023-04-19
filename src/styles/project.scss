@@ -429,13 +429,22 @@ a {
     display: none;
   }
 }
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   // .container {
   //   height: auto;
   // }
   .ms--images {
     left: calc(50% - 280px) !important;
-    top: calc(80% - 205px) !important;
+    top: calc(65% - 205px) !important;
+  }
+  .ms--numbers {
+    top: calc(65% - 300px);
+  }
+  .ms--titles {
+    top: calc(65% - 135px);
+  }
+  .ms--links {
+    top: calc(70% + 80px);
   }
   .sliders-container {
     margin-bottom: 50px;

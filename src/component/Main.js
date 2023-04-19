@@ -1,21 +1,29 @@
-import React from 'react'
-import { BrowserRouter, Link, Navigate, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import '../styles/main.scss'
 
 function Main() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const root = document.getElementById("root");
+  useEffect(()=> {
+    root.style = `overflow: hidden`
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => {
+      root.style = `overflow: initial`
+    }
+  }, [])
+
   const profile = (type) => {
-    // navigate("/profile");
     switch(type) {
       case "profile" :
         return navigate("/profile");
       case "skill" :
-        return navigate("/skills")
+        return navigate("/skills");
       case "project" :
-        return navigate("/project")
+        return navigate("/project");
       case "contact" :
-        return navigate("/contact")
-    }
+        return navigate("/contact");
+    };
   }
   return (
     <>

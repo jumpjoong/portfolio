@@ -4,7 +4,6 @@ import '../styles/skills.scss'
 
 function Skills() {
   const {dummy} = useContext(AppC)
-  const [tag, setTag] = useState(null);
   const value = Object.values(dummy.skill);
   const concatValue = value[0].concat(value[1],value[2])
   const bounce = useRef(null);
@@ -12,12 +11,15 @@ function Skills() {
     name:dummy.skill.skills[0].name,
     detail:dummy.skill.skills[0].detail
   });
+  let idx;
   //이펙트 태그
   const effectFirst = document.getElementsByClassName("effectFirst");
   const effectSecond = document.getElementsByClassName("effectSecond");
   const effectThird = document.getElementsByClassName("effectThird");
   const skillsSecond = document.getElementsByClassName("name");
   const skillsDetail = document.getElementsByClassName("detail");
+  
+
   //글씨 이펙트 부분
   useEffect(()=> {
     skillsSecond[0].classList.add("abc");
@@ -53,19 +55,19 @@ function Skills() {
   };
   //대표 글씨 출력하는 부분 애니메이션
   function ani () {
-    skillsSecond[0].classList.remove("abc")
-    skillsSecond[0].style.opacity = `0`
-    skillsDetail[0].classList.remove("abc")
-    skillsDetail[0].style.opacity = `0`
+    skillsSecond[0].classList.remove("abc");
+    skillsSecond[0].style.opacity = `0`;
+    skillsDetail[0].classList.remove("abc");
+    skillsDetail[0].style.opacity = `0`;
     setTimeout(()=> {
-      skillsSecond[0].classList.add("abc")
-      skillsSecond[0].style.opacity = `1`
-      skillsDetail[0].classList.add("abc")
-      skillsDetail[0].style.opacity = `1`
+      skillsSecond[0].classList.add("abc");
+      skillsSecond[0].style.opacity = `1`;
+      skillsDetail[0].classList.add("abc");
+      skillsDetail[0].style.opacity = `1`;
     },100);
     clearTimeout();
   };
-  //5초뒤 바운스 효과 재시작
+  //3초뒤 바운스 효과 재시작
   let sum
   function restart () {
     sum = setTimeout(() => {
@@ -73,15 +75,31 @@ function Skills() {
       animai();
     }, 4000);
   };
+  //class 없앰
+ 
+  
+  function deleteClass (idx) {
+
+    const elList = [...effectFirst, ...effectSecond, ...effectThird];
+
+    switch (idx.type) {
+      case "always" : 
+      idx.idx.classList.remove("bounce"); break;
+      case "click" :
+        elList.forEach(s=>{
+          s.classList.remove("bounce");
+        });
+        
+        break;
+    }
+ 
+  }
   //restart 멈춤
   function stopRestart () {
     clearTimeout(sum);
   }
   //animai 멈춤
   function stopAnimai () {
-    if (tag) {
-      tag.remove("bounce");
-    };
     clearInterval(bounce.current);
     idx = undefined;
   };
@@ -91,6 +109,7 @@ function Skills() {
       name:dummy.skill.skills[key].name,
       detail:dummy.skill.skills[key].detail
     });
+    deleteClass({type:"click"})
     ani();
     bounceAni(e);
     stopAnimai();
@@ -102,6 +121,7 @@ function Skills() {
       name:dummy.skill.deploy[key].name,
       detail:dummy.skill.deploy[key].detail
     });
+    deleteClass({type:"click"})
     ani();
     bounceAni(e);
     stopAnimai();
@@ -113,6 +133,7 @@ function Skills() {
       name:dummy.skill.tools[key].name,
       detail:dummy.skill.tools[key].detail
     })
+    deleteClass({type:"click"})
     ani();
     bounceAni(e);
     stopAnimai();
@@ -120,14 +141,12 @@ function Skills() {
     restart();
   };
   ///////////
-
+  
   /////바운스 효과
-  let idx;
-
   function animai () {
     bounce.current = setInterval(()=> {
       //각각의 li
-      const elList = [...effectFirst, ...effectSecond, ...effectThird];
+      const elList = [...effectFirst, ...effectSecond, ...effectThird];    
       //각 이미지 태그 잡은 랜덤 변수 
       const num = Math.floor(Math.random() * elList.length);
       //elList 키값 반환
@@ -135,7 +154,7 @@ function Skills() {
       //먼저 넣어야함
       //idx에 값이 있을 경우 클래스 없애는 함수
       if (idx) {
-        idx.classList.remove("bounce");
+        deleteClass({idx, type:"always"})
         if (idx.classList == elList[num].classList) {
           const abc = check.filter((obj)=> obj !== num);
           const num1 = Math.floor(Math.random() * abc.length);
@@ -144,7 +163,6 @@ function Skills() {
             name: concatValue[num1].name,
             detail: concatValue[num1].detail
           })
-          console.log("중복")
         } else {
           idx = elList[num];
           setSkill({
@@ -159,11 +177,10 @@ function Skills() {
           detail: concatValue[num].detail
         })
       }
-      setTag(idx.classList);
       //바운스 효과가 들어간 태그 출력
       ani();
       idx.classList.add("bounce");
-    }, 2000);
+    }, 3000);
   }
   return (
     <div className="skills">
@@ -181,7 +198,7 @@ function Skills() {
             <ul>
               {
                 dummy.skill.skills.map((obj, key)=> {
-                  return <li key={key} className="effectFirst">
+                  return <li  key={key} className="effectFirst">
                     <img src={`${obj.img}`} alt="사진" onClick={(e)=>skills(key, e)}/>
                   </li>
                 })

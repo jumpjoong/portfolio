@@ -23,6 +23,7 @@ main {
         padding: 10px 30px 30px 30px;
         transition: 0.3s;
         background-color: #f6f6f6;
+        cursor: pointer;
         .box-txt {
           font-size: 4rem;
           background-color: transparent;
@@ -63,10 +64,10 @@ main {
         bottom: 20px;
         left: 150px;
         width: 46.875%;
-        height: 700px;
+        height: 64.814%;
         border: 1px solid black;
         &:hover {
-          height: 800px;
+          height: 74.074%;
           background-color: #ffdb6b;
         }
       }
@@ -75,10 +76,10 @@ main {
         bottom: 20px;
         right: 2%;
         width: 52.083%;
-        height: 600px;
+        height: 55.555%;
         border: 1px solid black;
         &:hover {
-          height: 700px;
+          height: 64.814%;
           background-color: #81B3FF;
         }
       }
@@ -87,10 +88,10 @@ main {
         left: 2%;
         bottom: 20px;
         width: 62.5%;
-        height: 400px;
+        height: 37.037%;
         border: 1px solid black;
         &:hover {
-          height: 600px;
+          height: 55.555%;
           background-color: #FD7989;
         }
       }
@@ -100,11 +101,32 @@ main {
         right: 10%;
         bottom: 20px;
         width: 57.2916%;
-        height: 250px;
+        height: 23.148%;
         border: 1px solid black;
         &:hover {
-          height: 400px;
+          height: 37.037%;
           background-color: #4DE2C7;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:767px) and (max-width: 1024px) {
+  main {
+    .main-wrap {
+      .main-txt {
+        h1 {
+          font-size: 7rem;
+        }
+      }
+      .main-box {
+        .PROFILE {
+          left: 90px;
+        }
+        .box {
+          .box-txt {
+            font-size: 3rem;
+          }
         }
       }
     }

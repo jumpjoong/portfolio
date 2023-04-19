@@ -217,7 +217,7 @@
 }
 
 .ms--links.ms-container--vertical {
-  width: 120px;
+  width: 175px;
   height: 60px;
   max-height: 100%;
 }
@@ -254,7 +254,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 120px;
+  width: 175px;
   height: 60px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -265,9 +265,12 @@
 .ms--links {
   position: absolute;
   left: calc(60% - 420px);
-  top: calc(60% + 105px);
+  top: calc(63% + 105px);
   z-index: 1;
   color: white;
+}
+.ms--links .ms-slide__link:nth-child(1) {
+  margin-right: 10px;
 }
 
 .ms--links .ms-track {
@@ -284,7 +287,7 @@
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;         /*display: flex*/
   position: absolute;
   left: calc(50% - 420px);
   top: calc(100%);
@@ -332,18 +335,22 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1024px) {
   .ms--numbers {
-    left: calc(50% - 120px);
+    left: calc(12% - 120px);
+    top: calc(80% - 300px);
   }
   .ms--titles {
     left: calc(50% - 200px);
-    top: calc(50% - 135px);
+    top: calc(85% - 135px);
     text-align: center;
+  }
+  .ms-slide {
+    justify-content: center !important;
   }
   .ms--links {
     left: calc(50% - 60px);
-    top: calc(50% + 80px);
+    top: calc(80% + 80px);
   }
   .pagination {
     left: 50%;
@@ -378,7 +385,6 @@ body {
 }
 
 a {
-  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -421,7 +427,7 @@ a {
 .project-h2 h2 {
   color: white;
   font-family: var(--engH2-font);
-  font-size: 6rem;
+  font-size: 5rem;
 }
 @media screen and (max-width: 860px) {
   .header__menu, .footer {

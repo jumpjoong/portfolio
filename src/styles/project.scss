@@ -9,7 +9,6 @@
 // - $vertical: If slider should be vertical (true), or horizontal (false)
 // - $reverse: If slider should have reversed slides (first items at the end)
 // - $debug: Show helpful background colors to help debugging
-
 @mixin ms(
   // Default values
   $cssClass: "ms-container",
@@ -359,9 +358,6 @@ $ms-links-slide-height: 60px;
 // Responsive styles
 
 @media screen and (max-width: 860px) {
-  .ms--numbers {
-    left: calc(50% - #{$ms-numbers-slide-width / 2});
-  }
 
   .ms--titles {
     left: calc(50% - #{$ms-titles-slide-width / 2});
@@ -431,5 +427,17 @@ a {
   .header__menu,
   .footer {
     display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  // .container {
+  //   height: auto;
+  // }
+  .ms--images {
+    left: calc(50% - 280px) !important;
+    top: calc(80% - 205px) !important;
+  }
+  .sliders-container {
+    margin-bottom: 50px;
   }
 }

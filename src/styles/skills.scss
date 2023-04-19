@@ -101,11 +101,53 @@
     opacity: 1;
   }
 }
-
 @keyframes tong {
   from {
     transform: translateY(0);
   } to {
     transform: translateY(-15px);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .skills {
+    .skills-view {
+      padding: 0;
+      width: 90.3%;
+      .skills-second {
+        flex-wrap: wrap;
+        height: auto;
+        .name {
+          font-size: 4rem;
+        }
+        .detail {
+          height: 88px;
+        }
+      }
+      .skills-list {
+        > div {
+          padding: 20px 0 40px 0;
+          display: block;
+          > p {
+            &:first-child {
+              margin: 0 auto;
+              justify-content: center;
+              width: 27%;
+              margin-bottom: 20px;
+            }
+          }
+          ul {
+            justify-content: center;
+            li {
+              margin-right: 0;
+              margin: 0 20px 0 20px;
+              img {
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

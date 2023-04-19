@@ -6,8 +6,9 @@ import "../styles/portfolio-carousel.css";
 
 function Project() {
   const body = document.getElementsByTagName("body");
-  const header = document.getElementsByClassName("header")
-  const home = document.getElementsByClassName("home")
+  const header = document.getElementsByClassName("header");
+  const home = document.getElementsByClassName("home");
+  const root = document.getElementById("root")
   
   useEffect(() => {
     const script = document.createElement("script");
@@ -31,12 +32,14 @@ function Project() {
     body[0].style = `background-color: #424242`;
     header[0].style = `border-bottom: 1px solid #ffffffa4`;
     home[0].style = `color: white`;
+    root.style = `overflow: hidden`;
     return ()=> {
       body[0].style = `background-color: #f6f6f6`;
       header[0].style = `border: none`; 
       home[0].style = `color: black`;
+      root.style = `overflow: initial`;
     };
-//eslint-disable-next-line react-hooks/exhaustive-deps
+  //eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
   return (
     <div className="container">

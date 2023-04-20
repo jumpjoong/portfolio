@@ -61,7 +61,7 @@ function Main() {
           <div className="Contact box" onClick={()=>profile("contact")}>
             <p className="box-txt">Contact</p>
             <div className="event1 text">
-              <p>I will give you my contact information</p>
+              <p>My contact information</p>
             </div>
             <Link className="event1" to={"/contact"}>Learn More</Link>
           </div>

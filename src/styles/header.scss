@@ -52,6 +52,7 @@
     width: 100%;
     background-color: white;
     li {
+      position: relative;
       line-height: 68px;
       background-color: transparent ;
       img {
@@ -73,6 +74,19 @@
       }
       &:last-child {
         margin-right: 23px;
+      }
+      &:not(:first-child) {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 30%;
+          top: 50%;
+          left: -15%;
+          transform: translate(-50%, -50%);
+          display: block;
+          border: 1px solid rgb(136, 136, 136);
+        }
       }
       a {
         background-color: transparent;  

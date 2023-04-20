@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fac79a4d.css",
-    "main.js": "/portfolio/static/js/main.68fd8b27.js",
+    "main.css": "/portfolio/static/css/main.a04e42fa.css",
+    "main.js": "/portfolio/static/js/main.938a33e1.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pokemon.png": "/portfolio/static/media/pokemon.74c7917ec7585b61d87c.png",
     "static/media/lostArk.png": "/portfolio/static/media/lostArk.05e995aa967a995dda52.png",
     "index.html": "/portfolio/index.html",
     "static/media/close.svg": "/portfolio/static/media/close.c76ad28c33323dfe86ec1e4bcf9c5b6c.svg",
     "static/media/open.svg": "/portfolio/static/media/open.c16ad7d4e68aa1552ac6a30cd53b1cf8.svg",
-    "main.fac79a4d.css.map": "/portfolio/static/css/main.fac79a4d.css.map",
-    "main.68fd8b27.js.map": "/portfolio/static/js/main.68fd8b27.js.map",
+    "main.a04e42fa.css.map": "/portfolio/static/css/main.a04e42fa.css.map",
+    "main.938a33e1.js.map": "/portfolio/static/js/main.938a33e1.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac79a4d.css",
-    "static/js/main.68fd8b27.js"
+    "static/css/main.a04e42fa.css",
+    "static/js/main.938a33e1.js"
   ]
 }

@@ -88,7 +88,6 @@ function Skills() {
         });
         break;
     }
-
   }
   //animai 멈춤
   function stopAnimai () {

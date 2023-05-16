@@ -31,7 +31,7 @@
     vertical: true,
     reverse: true,
     style: {
-      opacity: [0, 1],
+      opacity: [0, 0.7],
     },
     interactive: false,
   });
@@ -45,8 +45,8 @@
     link:['http://khj0196.dothome.co.kr/','https://poketmon-sns-nv1u.vercel.app/'],
     git:['https://github.com/jumpjoong/lostArk','https://github.com/jumpjoong/poketmonSNS'],
     rangeContent: function (i) {
-      return `<a class="ms-slide__link" href="${this.link[this.range[i]]}" target="_blank" style="color: white">View Case</a>
-      <a class= "ms-slide__link" href="${this.git[i]}" target="_blank" style="color: white" >GIT HUB</a>`;
+      return `<a class="ms-slide__link" href="${this.link[this.range[i]]}" target="_blank" style="color: rgba(0,0,0,0.6)">View Case</a>
+      <a class= "ms-slide__link" href="${this.git[i]}" target="_blank" style="color: rgba(0,0,0,0.6)" >GIT HUB</a>`;
     },
     vertical: true,
     interactive: false,

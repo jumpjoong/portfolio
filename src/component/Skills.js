@@ -81,7 +81,8 @@ function Skills() {
 
     switch (idx.type) {
       case "always" : 
-      idx.idx.classList.remove("bounce"); break;
+      idx.idx.classList.remove("bounce"); 
+        break;
       case "click" :
         elList.forEach(s=>{
           s.classList.remove("bounce");
@@ -145,7 +146,7 @@ function Skills() {
       //idx에 값이 있을 경우 클래스 없애는 함수
       if (idx) {
         deleteClass({idx, type:"always"})
-        if (idx.classList == elList[num].classList) {
+        if (idx.classList === elList[num].classList) {
           const abc = check.filter((obj)=> obj !== num);
           const num1 = Math.floor(Math.random() * abc.length);
           idx = elList[num1];

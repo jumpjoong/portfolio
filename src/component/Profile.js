@@ -37,7 +37,7 @@ function Profile() {
             </div>
             <div className="email">
               <p>EMAIL</p>
-              <p>khj0196@gmail.com</p>
+              <p>khj0196@naver.com</p>
             </div>
           </div>
         </div>

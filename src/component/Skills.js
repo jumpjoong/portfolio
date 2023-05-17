@@ -76,9 +76,9 @@ function Skills() {
   };
   //class 없앰
   function deleteClass (idx) {
-
     const elList = [...effectFirst, ...effectSecond, ...effectThird];
 
+    // eslint-disable-next-line
     switch (idx.type) {
       case "always" : 
       idx.idx.classList.remove("bounce"); 

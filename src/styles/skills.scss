@@ -1,10 +1,13 @@
 .skills {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   height: calc(100vh - var(--header-height));
   position: relative;
   .skills-view {
     width: 83.333%;
     margin: 0 auto;
-    padding: 50px 30px 30px 30px;
+    padding: 0 30px 30px 30px;
     .skills-first {
       h4 {
         font-family: var(--hugeEng-font);
@@ -12,11 +15,9 @@
       }
     }
     .skills-second {
-      height: 128px;
       display: flex;
       align-items: center;
-      margin-bottom: 80px;
-      margin-top: 50px;
+      margin: 4.629% 0 3.407% 0;
       overflow: hidden;
       .name {
         position: relative;
@@ -29,19 +30,19 @@
         font-size: 2rem;
         font-family: var(--detail-font);
       }
-      .abc {
+      .upText {
         animation: up 0.5s;
       }
     }
     .skills-list {
       > div {
-        padding: 40px 0;
+        padding: 2.703% 0;
         border-top: 1px solid black;
         display: flex;
         /////각 스킬 종류 이름
         > p {
           &:first-child {
-            margin-right: 40px;
+            margin-right: 2.083%;
             display: flex;
             align-items: center;
             width: 15%;
@@ -70,7 +71,7 @@
           height: auto;
           li {
             width: 7%;
-            margin-right: 50px;
+            margin-right: 2.60416%;
             position: relative;
             transform: translateY(50%);
             opacity: 0;
@@ -101,11 +102,54 @@
     opacity: 1;
   }
 }
-
 @keyframes tong {
   from {
     transform: translateY(0);
   } to {
     transform: translateY(-15px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills {
+    .skills-view {
+      padding: 0;
+      width: 90.3%;
+      .skills-second {
+        flex-wrap: wrap;
+        height: auto;
+        .name {
+          font-size: 4rem;
+        }
+        .detail {
+          padding-top: 1.851%;
+          height: 100px;
+        }
+      }
+      .skills-list {
+        > div {
+          padding: 20px 0 40px 0;
+          display: block;
+          > p {
+            &:first-child {
+              margin: 0 auto;
+              justify-content: center;
+              width: 27%;
+              margin-bottom: 20px;
+            }
+          }
+          ul {
+            justify-content: center;
+            li {
+              margin-right: 0;
+              margin: 0 20px 0 20px;
+              img {
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

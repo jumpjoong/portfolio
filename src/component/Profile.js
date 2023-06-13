@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/profile.scss'
 
 function Profile() {
+  const root = document.getElementById("root");
+  useEffect(()=> {
+    root.style = `overflow: initial`
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   return (
     <div className="profile">
       <div className="profile-write">
@@ -15,26 +20,25 @@ function Profile() {
           <p>항상 초심을 잃지 않고 꾸준하게 성장할 자신이 있습니다.</p>
           <p>성실하고 꾸준한 개발자가 되고 싶은 김현중입니다. </p>
         </div>
-        <div className="resume">
-          <p>이력서 다운로드</p>
-        </div>
       </div>
       <div className="my-img">
         <div className="img-wrap">
-          <img src="./img/music.jpg" alt="사진" />
+          <img src="./img/me.jpg" alt="사진" />
         </div>  
         <div className="my-contact">
-          <div className="name">
-            <p>NAME</p>
-            <p>KIM HYUN JOONG</p>
-          </div>
-          <div className="phone">
-            <p>PHONE</p>
-            <p>+82 10-8844-0196</p>
-          </div>
-          <div className="email">
-            <p>EMAIL</p>
-            <p>khj0196@gmail.com</p>
+          <div>
+            <div className="name">
+              <p>NAME</p>
+              <p>KIM HYUN JOONG</p>
+            </div>
+            <div className="phone">
+              <p>PHONE</p>
+              <p>+82 10-8844-0196</p>
+            </div>
+            <div className="email">
+              <p>EMAIL</p>
+              <p>khj0196@naver.com</p>
+            </div>
           </div>
         </div>
       </div>

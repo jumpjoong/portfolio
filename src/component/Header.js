@@ -23,16 +23,19 @@ function Header() {
           <ul>
             <li><img src={closeImg} alt="버거메뉴"/></li>
             <li>
-              <Link to={"/profile"}>Profile</Link>
+              <Link to={"/"}>HOME</Link>
             </li>
             <li>
-              <Link to={"/skills"}>Skills</Link>
+              <Link to={"/profile"}>PROFILE</Link>
             </li>
             <li>
-              <Link to={"/project"}>Project</Link>
+              <Link to={"/skills"}>SKILLS</Link>
             </li>
             <li>
-              <Link to={"/contact"}>Contact</Link>
+              <Link to={"/project"}>PROJECT</Link>
+            </li>
+            <li>
+              <Link to={"/contact"}>CONTACT</Link>
             </li>
           </ul>
         </div>

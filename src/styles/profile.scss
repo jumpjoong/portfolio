@@ -1,5 +1,7 @@
 .profile {
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   height: calc(100vh - var(--header-height));
   position: relative;
   .profile-write {
@@ -38,6 +40,7 @@
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
     .my-contact {
@@ -58,11 +61,73 @@
         }
       }
       > div {
-        p {
-          line-height: 2;
+        > div{
+          p {
+            line-height: 2;
+          }
+          &:not(:last-child) {
+            margin-bottom: 100px;
+          }
         }
-        &:not(:last-child) {
-          margin-bottom: 100px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+  .profile {
+    .profile-write {
+      .detail {
+        p {
+          &:first-child {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1313px) {
+  body {
+    height: auto !important;
+    overflow: initial !important;
+  }
+  .profile {
+    height: auto;
+    padding: 0 5%;
+    .profile-write {
+      position: initial;
+      margin-bottom: 10%;
+      .introduce {
+        margin-bottom: 10%;
+      }
+      .detail {
+        margin-bottom: 10%;
+        p {
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+      .resume {
+        text-align: right;
+      }
+    }
+    .my-img {
+      display: flex;
+      height: auto;
+      .img-wrap {
+        position: initial;
+        width: 70%;
+        margin-right: 10%;
+      }
+      .my-contact {
+        top: 0;
+        padding-top: 53%;
+        position: relative;
+        padding: 0;
+        > div {
+          position: absolute;
+          bottom: 0;
         }
       }
     }

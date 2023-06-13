@@ -1,8 +1,7 @@
 .header {
   width: 100%;
   padding: 20px 40px 20px 40px;
-  height: 110px;
-  margin-bottom: 20px;
+  height: 10.185vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +37,7 @@
     pointer-events: auto;
     border-radius: 36px;
     display: block;
-    width: 350px;
+    width: auto;
     height: 69px;
     opacity: 1;
     transition: 0.2s;
@@ -49,8 +48,10 @@
     border-radius: 36px;
     display: flex;
     height: 100%;
+    width: 100%;
     background-color: white;
     li {
+      position: relative;
       line-height: 68px;
       background-color: transparent ;
       img {
@@ -65,12 +66,30 @@
       }
       &:nth-of-type(1) {
         border-radius: 36px 0 0 36px;
+        line-height: 115px;
       }
       &:not(:nth-child(1)) {
         margin: 0 10px;
       }
+      &:last-child {
+        margin-right: 23px;
+      }
+      &:not(:first-child) {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 30%;
+          top: 50%;
+          left: -15%;
+          transform: translate(-50%, -50%);
+          display: block;
+          border: 1px solid rgb(190, 190, 190);
+        }
+      }
       a {
-        background-color: transparent;
+        color: black;
+        background-color: transparent;  
       }
     }
   }

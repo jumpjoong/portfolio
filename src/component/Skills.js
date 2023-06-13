@@ -14,16 +14,15 @@ function Skills() {
   let idx;
   //이펙트 태그
   const effectFirst = document.getElementsByClassName("effectFirst");
+  const test = useRef(null)
   const effectSecond = document.getElementsByClassName("effectSecond");
   const effectThird = document.getElementsByClassName("effectThird");
   const skillsSecond = document.getElementsByClassName("name");
   const skillsDetail = document.getElementsByClassName("detail");
-  
-
   //글씨 이펙트 부분
   useEffect(()=> {
-    skillsSecond[0].classList.add("abc");
-    skillsDetail[0].classList.add("abc");
+    skillsSecond[0].classList.add("upText");
+    skillsDetail[0].classList.add("upText");
     setTimeout(()=> {
       for (let i = 0; effectFirst.length > i; i++) {
         effectFirst[i].classList.add("move");
@@ -55,14 +54,14 @@ function Skills() {
   };
   //대표 글씨 출력하는 부분 애니메이션
   function ani () {
-    skillsSecond[0].classList.remove("abc");
+    skillsSecond[0].classList.remove("upText");
     skillsSecond[0].style.opacity = `0`;
-    skillsDetail[0].classList.remove("abc");
+    skillsDetail[0].classList.remove("upText");
     skillsDetail[0].style.opacity = `0`;
     setTimeout(()=> {
-      skillsSecond[0].classList.add("abc");
+      skillsSecond[0].classList.add("upText");
       skillsSecond[0].style.opacity = `1`;
-      skillsDetail[0].classList.add("abc");
+      skillsDetail[0].classList.add("upText");
       skillsDetail[0].style.opacity = `1`;
     },100);
     clearTimeout();
@@ -189,7 +188,7 @@ function Skills() {
             <ul>
               {
                 dummy.skill.skills.map((obj, key)=> {
-                  return <li  key={key} className="effectFirst">
+                  return <li  key={key} className="effectFirst" ref={test}>
                     <img src={`${obj.img}`} alt="사진" onClick={(e)=>skills(key, e)}/>
                   </li>
                 })

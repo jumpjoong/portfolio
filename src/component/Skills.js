@@ -14,7 +14,6 @@ function Skills() {
   let idx;
   //이펙트 태그
   const effectFirst = document.getElementsByClassName("effectFirst");
-  const test = useRef(null)
   const effectSecond = document.getElementsByClassName("effectSecond");
   const effectThird = document.getElementsByClassName("effectThird");
   const skillsSecond = document.getElementsByClassName("name");
@@ -38,7 +37,6 @@ function Skills() {
         }, 300);
       }, 300);
     },150);
-    clearTimeout();
     animai();
     return () => {
       stopAnimai();
@@ -188,7 +186,7 @@ function Skills() {
             <ul>
               {
                 dummy.skill.skills.map((obj, key)=> {
-                  return <li  key={key} className="effectFirst" ref={test}>
+                  return <li  key={key} className="effectFirst">
                     <img src={`${obj.img}`} alt="사진" onClick={(e)=>skills(key, e)}/>
                   </li>
                 })

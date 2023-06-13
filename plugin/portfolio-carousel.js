@@ -31,7 +31,7 @@
     vertical: true,
     reverse: true,
     style: {
-      opacity: [0, 0.7],
+      opacity: [0, 0.6],
     },
     interactive: false,
   });

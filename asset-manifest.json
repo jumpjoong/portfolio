@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.0effedd9.css",
-    "main.js": "/portfolio/static/js/main.bf124571.js",
+    "main.js": "/portfolio/static/js/main.bd6b7812.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pokemon.png": "/portfolio/static/media/pokemon.74c7917ec7585b61d87c.png",
     "static/media/lostArk.png": "/portfolio/static/media/lostArk.05e995aa967a995dda52.png",
@@ -9,11 +9,11 @@
     "static/media/close.svg": "/portfolio/static/media/close.c76ad28c33323dfe86ec1e4bcf9c5b6c.svg",
     "static/media/open.svg": "/portfolio/static/media/open.c16ad7d4e68aa1552ac6a30cd53b1cf8.svg",
     "main.0effedd9.css.map": "/portfolio/static/css/main.0effedd9.css.map",
-    "main.bf124571.js.map": "/portfolio/static/js/main.bf124571.js.map",
+    "main.bd6b7812.js.map": "/portfolio/static/js/main.bd6b7812.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0effedd9.css",
-    "static/js/main.bf124571.js"
+    "static/js/main.bd6b7812.js"
   ]
 }

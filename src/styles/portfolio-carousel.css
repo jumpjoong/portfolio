@@ -125,7 +125,7 @@
 .ms--numbers .ms-slide {
   font-size: 9em;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .ms--titles {
@@ -206,7 +206,6 @@
 }
 
 .ms--titles .ms-slide h3 {
-  color: white;
   margin: 0;
   text-shadow: 1px 1px 2px black;
 }
@@ -280,7 +279,7 @@
 .ms--links .ms-slide__link {
   font-weight: 600;
   padding: 5px 0 8px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
 
@@ -429,7 +428,7 @@ a {
   line-height: 0.9;
 }
 .project-h2 h2 {
-  color: white;
+  color: rgba(0, 0, 0, 0.6);
   font-family: var(--engH2-font);
   font-size: 5rem;
 }

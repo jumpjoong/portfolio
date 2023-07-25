@@ -30,7 +30,7 @@ main {
         .box-txt {
           font-size: 4rem;
           background-color: transparent;
-          font-family: 'Russo One', sans-serif
+          font-family: 'Russo One', sans-serif;
         }
         .text {
           background-color: transparent;
@@ -39,7 +39,6 @@ main {
           p {
             font-size: 2rem;
             background-color: transparent;
-            // font-family: 'Noto Sans KR', sans-serif;
             font-family: 'KHNPHD';
             letter-spacing: -0.3px;
           }
@@ -67,10 +66,10 @@ main {
         bottom: 20px;
         left: 150px;
         width: 46.875%;
-        height: 64.814%;
+        height: 64.814vh;
         border: 1px solid black;
         &:hover {
-          height: 74.074%;
+          height: 74.074vh;
           background-color: #ffdb6b;
         }
       }
@@ -79,10 +78,10 @@ main {
         bottom: 20px;
         right: 2%;
         width: 52.083%;
-        height: 55.555%;
+        height: 55.555vh;
         border: 1px solid black;
         &:hover {
-          height: 64.814%;
+          height: 64.814vh;
           background-color: #81B3FF;
         }
       }
@@ -91,10 +90,10 @@ main {
         left: 2%;
         bottom: 20px;
         width: 62.5%;
-        height: 37.037%;
+        height: 37.037vh;
         border: 1px solid black;
         &:hover {
-          height: 55.555%;
+          height: 55.555vh;
           background-color: #FD7989;
         }
       }
@@ -104,17 +103,17 @@ main {
         right: 10%;
         bottom: 20px;
         width: 57.2916%;
-        height: 23.148%;
+        height: 23.148vh;
         border: 1px solid black;
         &:hover {
-          height: 37.037%;
+          height: 37.037vh;
           background-color: #4DE2C7;
         }
       }
     }
   }
 }
-@media screen and (min-width:767px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   main {
     .main-wrap {
       .main-txt {

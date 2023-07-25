@@ -18,12 +18,10 @@ function Skills() {
   const effectThird = document.getElementsByClassName("effectThird");
   const skillsSecond = document.getElementsByClassName("name");
   const skillsDetail = document.getElementsByClassName("detail");
-  
-
   //글씨 이펙트 부분
   useEffect(()=> {
-    skillsSecond[0].classList.add("abc");
-    skillsDetail[0].classList.add("abc");
+    skillsSecond[0].classList.add("upText");
+    skillsDetail[0].classList.add("upText");
     setTimeout(()=> {
       for (let i = 0; effectFirst.length > i; i++) {
         effectFirst[i].classList.add("move");
@@ -39,7 +37,6 @@ function Skills() {
         }, 300);
       }, 300);
     },150);
-    clearTimeout();
     animai();
     return () => {
       stopAnimai();
@@ -55,14 +52,14 @@ function Skills() {
   };
   //대표 글씨 출력하는 부분 애니메이션
   function ani () {
-    skillsSecond[0].classList.remove("abc");
+    skillsSecond[0].classList.remove("upText");
     skillsSecond[0].style.opacity = `0`;
-    skillsDetail[0].classList.remove("abc");
+    skillsDetail[0].classList.remove("upText");
     skillsDetail[0].style.opacity = `0`;
     setTimeout(()=> {
-      skillsSecond[0].classList.add("abc");
+      skillsSecond[0].classList.add("upText");
       skillsSecond[0].style.opacity = `1`;
-      skillsDetail[0].classList.add("abc");
+      skillsDetail[0].classList.add("upText");
       skillsDetail[0].style.opacity = `1`;
     },100);
     clearTimeout();
@@ -76,19 +73,19 @@ function Skills() {
   };
   //class 없앰
   function deleteClass (idx) {
-
     const elList = [...effectFirst, ...effectSecond, ...effectThird];
 
+    // eslint-disable-next-line
     switch (idx.type) {
       case "always" : 
-      idx.idx.classList.remove("bounce"); break;
+      idx.idx.classList.remove("bounce"); 
+        break;
       case "click" :
         elList.forEach(s=>{
           s.classList.remove("bounce");
         });
         break;
     }
-
   }
   //animai 멈춤
   function stopAnimai () {
@@ -146,7 +143,7 @@ function Skills() {
       //idx에 값이 있을 경우 클래스 없애는 함수
       if (idx) {
         deleteClass({idx, type:"always"})
-        if (idx.classList == elList[num].classList) {
+        if (idx.classList === elList[num].classList) {
           const abc = check.filter((obj)=> obj !== num);
           const num1 = Math.floor(Math.random() * abc.length);
           idx = elList[num1];

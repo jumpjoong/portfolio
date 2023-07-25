@@ -2,7 +2,6 @@
   width: 100%;
   padding: 20px 40px 20px 40px;
   height: 10.185vh;
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +51,7 @@
     width: 100%;
     background-color: white;
     li {
+      position: relative;
       line-height: 68px;
       background-color: transparent ;
       img {
@@ -74,7 +74,21 @@
       &:last-child {
         margin-right: 23px;
       }
+      &:not(:first-child) {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 30%;
+          top: 50%;
+          left: -15%;
+          transform: translate(-50%, -50%);
+          display: block;
+          border: 1px solid rgb(190, 190, 190);
+        }
+      }
       a {
+        color: black;
         background-color: transparent;  
       }
     }
